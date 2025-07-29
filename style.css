@@ -1,0 +1,32 @@
+:root {
+    --primary: #3B82F6;
+    --primary-light: #DBEAFE;
+    --primary-dark: #1E3A8A;
+    --background: #f9fafb;
+    --success: #d1fae5;
+    --success-text: #065f46;
+    --error: #fee2e2;
+    --error-text: #b91c1c;
+}
+
+/* we set the following settings because we want
+to set elements to their defaults  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Blue Highway";
+    background-color: var(--background);
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
