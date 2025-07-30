@@ -18,7 +18,7 @@ to set elements to their defaults  */
 }
 
 body {
-    font-family: "Blue Highway";
+    font-family: "Blue Highway", sans-serif;
     background-color: var(--background);
     color: #333;
     line-height: 1.6;
@@ -29,4 +29,25 @@ header {
     color: white;
     padding: 2rem 1rem;
     text-align: center;
+}
+
+/* clock */
+
+.clock-container {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+    text-align: center;
+    font-family: "Blue Highway", sans-serif;
+    letter-spacing: 2px;
+    border-bottom: 2px solid var(--primary);
+}
+
+@media (max-width: 768px) {
+    .clock-container {
+        font-size: 1.4rem;
+        padding: 0.75rem;
+    }    
 }
