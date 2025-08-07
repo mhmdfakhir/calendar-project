@@ -1,3 +1,9 @@
+<?php
+
+include "calendar.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -24,9 +30,9 @@
     <!-- Calendar -->
     <div class="calendar">
         <div class="nav-btn-container">
-            <button class="nav-btn">⏮️</button>
+            <button onclick="changeMonth(-1)" class="nav-btn">⏮️</button>
             <h2 id="monthYear" style="margin: 0"></h2>
-            <button class="nav-btn">⏭️</button>
+            <button onclick="changeMonth(1)" class="nav-btn">⏭️</button>
         </div>
 
         <div class="calendar-grid" id="calendar"></div>
@@ -55,6 +61,12 @@
                 <label for="endDate">End Date: </label>
                 <input type="date" name="end_date" id="endDate" required>
 
+                <label for="startTime">Start Time: </label>
+                <input type="time" name="start_time" id="startTime" required>
+
+                <label for="endTime">End Time: </label>
+                <input type="time" name="end_time" id="endTime" required>
+
                 <button type="submit">Save</button>
 
             </form>
@@ -76,6 +88,9 @@
         </div>
     </div>
 
+    <script> 
+        const events = <?= json_encode($eventsFromDb, JSON_UNESCAPED_UNICODE); ?>;
+    </script>
     <script src="calendar.js"></script>
 </body>
 
